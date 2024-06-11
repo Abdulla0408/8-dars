@@ -1,16 +1,16 @@
-{% extends 'students/dashboard.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
 
 <div class="container">
-    <h1>Reset password page</h1>
+    <h1>Edit student page</h1>
 
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
 
         {{form}}
 
-        <button type="submit" class="btn btn-outline-info">Save</button>
+        <button type="submit" class="btn btn-outline-info">Register</button>
     </form>
 </div>
 

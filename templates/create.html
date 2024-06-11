@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>This is Add users page</h2>
+
+<div class="container">
+    <form method="post" action="{% url 'save_page' %}">
+        {% csrf_token %}
+
+        <label for="first_name" class="form-label">First name: </label>
+        <input placeholder="First name" id="first_name" type="text" name="first_name" class="form-control">
+
+        <label for="last_name" class="form-label">Last name: </label>
+        <input placeholder="Last name" id="last_name" type="text" name="last_name" class="form-control">
+
+        <label for="email" class="form-label">Email: </label>
+        <input placeholder="Email" id="email" type="text" name="email" class="form-control">
+
+        <label for="location" class="form-label">Location: </label>
+        <input placeholder="Location" id="location" type="text" name="location" class="form-control">
+
+        <label for="phone" class="form-label">Phone number: </label>
+        <input placeholder="Phone number" id="phone" type="number" name="phone" class="form-control">
+
+        <label for="hobby" class="form-label">Hobby: </label>
+        <input placeholder="Hobby" id="hobby" name="hobby" class="form-control">
+
+        <button type="submit" class="btn btn-success">Save</button>
+    </form>
+</div>
+
+{% endblock content %}
